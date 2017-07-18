@@ -118,6 +118,7 @@ export default class MaterialTabs extends React.Component {
                 ? this.state.tabWidth
                 : this.state.barWidth * 0.4
             }
+            height = {this.props.indicatorHeight}
           />
         </ScrollView>
       </Bar>
@@ -131,6 +132,7 @@ MaterialTabs.propTypes = {
   items: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
   onChange: React.PropTypes.func.isRequired,
   textStyle : Text.propTypes.style,
+  indicatorHeight : React.PropTypes.number,
 }
 MaterialTabs.defaultProps = {
   selectedIndex: 0,
@@ -140,4 +142,5 @@ MaterialTabs.defaultProps = {
   inactiveTextColor: 'rgba(255, 255, 255, 0.7)',
   scrollable: false,
   textStyle : undefined,
+  indicatorHeight : 2,
 }
