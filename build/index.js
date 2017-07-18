@@ -1,5 +1,5 @@
 import React from 'react'
-import { Animated, ScrollView } from 'react-native'
+import { Animated, ScrollView, Text } from 'react-native'
 import { Bar } from './styles'
 import TabTrack from './TabTrack'
 import Tab from './Tab'
@@ -105,6 +105,7 @@ export default class MaterialTabs extends React.Component {
                     : this.state.barWidth * 0.4
                 }
                 inActiveTextColor={this.props.inactiveTextColor}
+                textStyle = {this.props.textStyle}
               />
             ))}
           </TabTrack>
@@ -128,7 +129,8 @@ export default class MaterialTabs extends React.Component {
 }
 MaterialTabs.propTypes = {
   items: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-  onChange: React.PropTypes.func.isRequired
+  onChange: React.PropTypes.func.isRequired,
+  textStyle : Text.propTypes.style,
 }
 MaterialTabs.defaultProps = {
   selectedIndex: 0,
@@ -136,5 +138,6 @@ MaterialTabs.defaultProps = {
   activeTextColor: '#fff',
   indicatorColor: '#fff',
   inactiveTextColor: 'rgba(255, 255, 255, 0.7)',
-  scrollable: false
+  scrollable: false,
+  textStyle : undefined,
 }
