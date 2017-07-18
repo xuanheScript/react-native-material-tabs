@@ -7,13 +7,14 @@ const Tab = ({
   text,
   inActiveTextColor,
   tabWidth,
-  stretch
+  stretch,
+  textStyle,
 }) => {
   const color = active ? activeTextColor : inActiveTextColor
   return (
     <TabButton onPress={onPress} tabWidth={tabWidth} stretch={stretch}>
       <TabBody>
-        <TabText color={color}>{text.toUpperCase()}</TabText>
+        <TabText color={color} textStyle={textStyle}>{text.toUpperCase()}</TabText>
       </TabBody>
     </TabButton>
   )
