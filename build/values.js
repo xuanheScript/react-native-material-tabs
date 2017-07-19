@@ -1,3 +1,3 @@
 export default {
-  barHeight: 48
+  barHeight: 40
 }
